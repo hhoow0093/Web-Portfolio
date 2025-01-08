@@ -1,0 +1,144 @@
+/*adding custom font*/
+@font-face{
+    font-family: 'ValorantFont';
+    src: url('../assets/font/Valorant-Font.ttf') format('truetype');
+}
+
+.navbar-valo{
+    width: 90px;
+    background-color: rgb(89, 8, 8, 0.86);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    animation: slideout 0.5s;
+    overflow: hidden;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+
+@keyframes slidein{
+    from{
+        width: 90px;
+
+    }
+    to{
+        width: 300px;
+
+    }
+}
+
+@keyframes slideout{
+    from{
+        width: 300px;
+
+    }
+    to{
+        width: 90px;
+
+    }
+
+}
+
+.navbar-valo.show-navbar-text{
+    width: 300px;
+    animation: slidein 0.5s ease-in-out;
+}
+
+button{
+    border: 0;
+    background-color: rgb(89, 8, 8, 0);
+    padding: 0;
+    margin: 0;
+}
+
+svg {
+    transition: filter 0.3s ease-in-out;
+}
+
+svg:hover {
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+}
+
+ul > * {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+}
+
+.nav-header {
+    display: flex;
+    min-height: 20vh;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.fixed-title{
+    position: relative;
+    top: 10px;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+a{
+    font-family: 'ValorantFont', sans-serif;
+    text-decoration: none;
+    color: white;
+    transition: filter 0.3s ease-in-out;
+    margin: 0;
+    padding: 0;
+}
+
+a:hover{
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+
+}
+
+.my-navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: auto;
+}
+
+.my-unordered-list{
+    padding: 0;
+    min-height: 60vh;
+    width: auto;
+    flex-grow: 0.5;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    /* padding-left: 60px; */
+}
+
+.my-unordered-list > li > a {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-navigation-footer {
+    flex-grow: 1;
+    display: flex;
+    align-items: end;
+}
+
+.contact-me{
+    font-size: 20px;
+}
+
+.my-footer-nav{
+    width: 100%;
+    height: 100%;
+}
