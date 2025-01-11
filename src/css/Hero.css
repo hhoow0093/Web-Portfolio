@@ -1,0 +1,139 @@
+@font-face{
+    font-family: 'ValorantFont';
+    src: url('../assets/font/Valorant-Font.ttf') format('truetype');
+}
+
+.dummy {
+  width: 90px;
+  min-height: 80vh;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.my-hero-section {
+  flex-grow: 1;
+  background-image: url("../assets/img/Hero-thumbnail.jpg");
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(1000px, 1500px));
+  grid-template-rows: repeat(2, 1fr);
+  overflow: hidden;
+}
+
+.my-hero-section::before {
+  content: "";
+  background-color: rgb(0, 0, 0, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay1 {
+  background-color: rgba(244, 133, 59, 0.2); 
+  clip-path: polygon(100% 0, 0% 0%, 0% 100%); 
+  width: 1500px;
+  height: 80vh;
+}
+
+.overlay2 {
+  background-color: rgba(232, 238, 54, 0.2); 
+  clip-path: polygon(100% 0, 100% 100%, 0% 100%); 
+  width: 1500px;
+  height: 80vh;
+  position: absolute;
+  left:50%;
+}
+
+.character-overlay{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    min-width: 700px;
+    min-height: 85vh;
+    z-index: 0;
+    bottom: -20%;
+    left: 35%;
+    transform: translateX(-50%);    
+}
+
+
+.my-text{
+    font-family: 'ValorantFont', sans-serif;
+    position: absolute;
+    z-index: 3;
+    color: white;
+    top: 40%;
+    left: 55%;
+    width: 500px;
+}
+
+.my-text > h2 {
+    font-size: 45px;
+}
+
+.my-text > h3 {
+    font-size: 25px;
+}
+
+@media (max-width:1460px) {
+    .my-text{
+        display: none;
+
+    }
+    .character-overlay{
+        left: 55%;
+    }
+    
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+
+    }
+    to{
+        opacity: 1;
+
+    }
+}
+
+.fade-in{
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeOut{
+    from{
+        opacity: 1;
+
+    }
+    to{
+        opacity: 0;
+
+    }
+}
+
+.fade-out{
+    animation: fadeOut 1s ease-in-out;
+}
+
+@keyframes slideLeft{
+    from{
+
+        transform: translateX(2%);
+
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+.slide-left{
+    animation: slideLeft 0.5s ease-in;
+}
