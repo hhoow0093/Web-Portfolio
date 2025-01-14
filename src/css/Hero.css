@@ -4,16 +4,21 @@
 }
 
 .dummy {
-  width: 90px;
+  min-width: 90px;
   min-height: 80vh;
+  background-color: chartreuse;
+  flex-grow: 0;
 }
 
 .wrapper {
   display: flex;
+  overflow-x: hidden;
+  
 }
 
 .my-hero-section {
   flex-grow: 1;
+  flex-shrink: 0;
   background-image: url("../assets/img/Hero-thumbnail.jpg");
   width: 100%;
   height: 80vh;
@@ -24,6 +29,8 @@
   grid-template-columns: repeat(4, minmax(1000px, 1500px));
   grid-template-rows: repeat(2, 1fr);
   overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 .my-hero-section::before {
@@ -84,8 +91,18 @@
 
 @media (max-width:1460px) {
     .my-text{
-        display: none;
+        max-width: 200px;
+        left: 15%;
+        top: 5%;
+        z-index: 0;
 
+    }
+    .my-text > h2{
+        font-size: 25px;
+
+    }
+    .my-text > h3{
+        font-size: 15px;
     }
     .character-overlay{
         left: 55%;
@@ -137,3 +154,18 @@
 .slide-left{
     animation: slideLeft 0.5s ease-in;
 }
+
+.transition{
+    background-color: black;
+    min-height: 20vh;
+    width: 100%;
+}
+
+
+@media (max-width: 550px) {
+    .dummy {
+      min-width: 40px;
+      flex-grow: 0;
+      background-color: chartreuse;
+    }
+  }
