@@ -169,3 +169,19 @@
       background-color: chartreuse;
     }
   }
+
+.overlay1, .overlay2, .character-overlay, .my-text {
+    will-change: transform;
+}
+  
+.my-hero-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width:867px) {
+    .dummy{
+        display: none;
+    }
+    
+}

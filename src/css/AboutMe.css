@@ -33,9 +33,10 @@
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  background-attachment: fixed;
   position: relative;
   background-color: #eeee;
+
 }
 
 .transition-a {
@@ -113,4 +114,11 @@
     flex-grow: 0;
     background-color: aqua;
   }
+}
+
+@media screen and (max-width:867px) {
+  .dummy2{
+      display: none;
+  }
+  
 }

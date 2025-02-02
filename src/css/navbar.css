@@ -145,3 +145,11 @@ li{
     width: 100%;
     height: 100%;
 }
+
+/*hilangkan side bar*/
+@media screen and (max-width:867px) {
+    .navbar-valo{
+        display: none;
+    }
+    
+}
