@@ -32,11 +32,9 @@
   background-image: url("../assets/img/transition/wave2.png");
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background-size: cover 1500px;
   position: relative;
   background-color: #eeee;
-
 }
 
 .transition-a {

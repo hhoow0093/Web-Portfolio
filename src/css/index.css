@@ -1,3 +1,12 @@
 body{
   overflow-x: hidden;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: white;
+      color: black;
+  }
+
+
+}
