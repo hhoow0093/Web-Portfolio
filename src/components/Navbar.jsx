@@ -50,6 +50,7 @@ function Navbar() {
             <div className="logo">
               <svg
                 fill="#fff"
+                className="add-glow"
                 width="50px"
                 height="50px"
                 viewBox="0 0 32 32"
@@ -79,6 +80,7 @@ function Navbar() {
               <span className="my-icon">
                 <svg
                   width="30px"
+                  className="add-glow"
                   height="30px"
                   viewBox="0 0 16 16"
                   fill="none"
@@ -97,6 +99,7 @@ function Navbar() {
               <span className="my-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
+                  className="add-glow"
                   width="30"
                   height="30"
                   fill="currentColor"
@@ -112,6 +115,7 @@ function Navbar() {
               <span className="my-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
+                  className="add-glow"
                   width="30"
                   height="30"
                   fill="currentColor"
@@ -126,6 +130,7 @@ function Navbar() {
             <li>
               <span className="my-icon">
                 <svg
+                  className="add-glow"
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
                   height="30"
@@ -144,6 +149,7 @@ function Navbar() {
             <li>
               <span className="my-icon">
                 <svg
+                  className="add-glow"
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
                   height="30"
@@ -166,6 +172,7 @@ function Navbar() {
             <div className="my-col col-4">
               <span className="my-icon">
                 <svg
+                  className="add-glow"
                   xmlns="http://www.w3.org/2000/svg"
                   width="35"
                   height="35"

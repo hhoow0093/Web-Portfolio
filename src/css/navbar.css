@@ -56,11 +56,12 @@ button{
     margin: 0;
 }
 
-svg {
+svg.add-glow {
     transition: filter 0.3s ease-in-out;
+    color: white;
 }
 
-svg:hover {
+svg.add-glow:hover {
     filter: drop-shadow(0 0 10px rgb(255, 0, 0));
 }
 

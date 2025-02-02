@@ -118,5 +118,9 @@
   .dummy2{
       display: none;
   }
+  .about-me-container {
+    padding: 0;
+
+  }
   
 }
