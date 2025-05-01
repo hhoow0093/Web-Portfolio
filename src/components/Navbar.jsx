@@ -144,7 +144,7 @@ function Navbar() {
                   />
                 </svg>
               </span>
-              {showText && <a href="">Credits To</a>}
+              {showText && <a href="">Activities</a>}
             </li>
             <li>
               <span className="my-icon">
