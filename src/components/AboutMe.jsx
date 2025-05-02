@@ -1,11 +1,11 @@
 import React from "react";
 import "../css/AboutMe.css";
 import Howard from "../assets/img/me/Howard.jpeg";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { useGSAP } from "@gsap/react";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(useGSAP);
-gsap.registerPlugin(ScrollTrigger);   
+// gsap.registerPlugin(useGSAP);
+// gsap.registerPlugin(ScrollTrigger);   
 
 function AboutMe() {
     // useGSAP({
