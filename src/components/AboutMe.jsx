@@ -1,33 +1,102 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../css/AboutMe.css";
 import Howard from "../assets/img/me/Howard.jpeg";
-// import { useGSAP } from "@gsap/react";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// gsap.registerPlugin(useGSAP);
-// gsap.registerPlugin(ScrollTrigger);   
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 function AboutMe() {
-    // useGSAP({
+  const photo = useRef();
+  const mycard = useRef();
+  const shadowCard = useRef();
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: ".img-frame",
+    });
+    tl.fromTo(
+      [photo.current, mycard.current],
+      { opacity: 0 },
+      {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        duration: (index) => (index == 1 ? 0.2 : 2),
+      }
+    );
+    tl.fromTo(
+      shadowCard.current,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 0.5,
+        x: 20,
+        y: 70,
+      }
+    );
+  });
 
-    // })
-
-    return (
-        <div className="wrapper">
-            <div className="dummy2"></div>
-            <section className="about-me">
-                <div className="transition-kotak-1"></div>
-                <section className="real-about-me">
-                    <div className="transition-stripes-1"></div>
-                    <section className="my-container-info">
-
-                    </section>
-                    <div className="transition-stripes-2"></div>
-                </section>
-                <div className="transition-kotak-2"></div>
-            </section>
+  return (
+    <div className="wrapper">
+      <div className="dummy2"></div>
+      <section className="about-me">
+        <div className="transition-kotak-1">
+            <h1 className="next-intro">About me</h1>
         </div>
-    )
+        <section className="real-about-me">
+          <div className="transition-stripes-1"></div>
+          <section className="my-container-info row">
+            <div className="col-12 col-md-4">
+              <div className="my-frame-box">
+                <div className="img-frame" ref={photo}>
+                  <img src={Howard} alt="" srcset=""></img>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-8">
+              <div className="my-frame-box">
+                <div className="overlay-shadow" ref={shadowCard}></div>
+                <div className="my-description p-5" ref={mycard}>
+                  <div className="heading">
+                    <h3>Howard</h3>
+                    <h3>Student College</h3>
+                    <h3>About me</h3>
+                  </div>
+                  <p className="description-text">
+                    "I am an{" "}
+                    <span className="bold-weight">informatics student</span>{" "}
+                    currently enrolling in Universitas Multimedia Nusantara{" "}
+                    <span className="bold-weight">5th Semester.</span> I have a
+                    strong interest in developing{" "}
+                    <span className="bold-weight">
+                      web and mobile application
+                    </span>
+                    . I am also interested in{" "}
+                    <span className="bold-weight">AI field.</span> i wanna learn
+                    as much as possible to help anyone who needs my help. I am
+                    currently seeking for{" "}
+                    <span className="bold-weight">internship</span> as well to
+                    learn real life tech skills that is used by the common
+                    industries nowadays. If anyone is willingly to hire me,{" "}
+                    <span className="bold-weight">please contact me.</span>"
+                  </p>
+                  <button className="my-button bold-weight">View CV</button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div className="transition-stripes-2"></div>
+        </section>
+        <div className="transition-kotak-2">
+          <div className="container-fluid ">
+            <h1 className="next-value">VALUE</h1>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }
 
 export default AboutMe;
