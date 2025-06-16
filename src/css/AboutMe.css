@@ -123,18 +123,6 @@
 
 
 
-@media screen and (max-width:867px) {
-  .my-description{
-    margin-top: 30px;
-  }
-
-
-  .my-frame-box{
-    padding: 0;
-    margin: 0;
-  }
-
-}
 
 @media screen and (max-width:1110px) {
     .overlay-shadow{
@@ -174,7 +162,7 @@
 }
 
 .my-button:hover{
-  background-color: #b01515;
+  background-color: #850101;
 }
 
 .overlay-shadow{
@@ -204,5 +192,43 @@
   color: aliceblue;
   font-family: "ValorantFont", sans-serif;
   font-size: 80px;
+}
+
+
+@media screen and (max-width:867px) {
+  .my-description{
+    margin-top: 30px;
+  }
+
+
+  .my-frame-box{
+    padding: 0;
+    margin: 0;
+  }
+
+  .next-value{
+    font-size: 50px;
+}
+
+.next-intro{
+  font-size: 50px;
+}
+
+#more-pad1{
+padding: 100px 0px;
+
+}
+#more-pad2{
+  padding-bottom: 100px;
+}
+
+}
+
+.my-svg{
+    transition: filter 0.3s ease-in-out;
+}
+
+.my-svg:hover{
+    filter: drop-shadow(0 0 10px rgb(255, 0, 0));
 }
 

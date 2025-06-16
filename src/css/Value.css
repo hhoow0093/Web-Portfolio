@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "ValorantFont";
+  src: url("../assets/font/Valorant-Font.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OrbitronBlack";
+  src: url("../assets/font/Orbitron-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OrbitronBold";
+  src: url("../assets/font/Orbitron-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OrbitronRegular";
+  src: url("../assets/font/Orbitron-Regular.ttf") format("truetype");
+}
+
+.wrapper {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.dummy {
+  min-width: 90px;
+  flex-grow: 0;
+  background-color: aqua;
+}
+
+.my-value{
+  min-height: 100vh;
+  background-color: #A0A0A0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.transition-kotak-2{
+  position: relative;
+  min-height: 20vh;
+  width: 100%;
+  background-color: #3D0000;
+  padding-top: 50px;
+}
+
+.next-timeline{
+  text-align: end;
+  width: 92vw;
+  color: aliceblue;
+  font-family: "ValorantFont", sans-serif;
+  font-size: 80px;
+  margin: 0;
+  padding: 0;
+}
+
+.value-cards{
+    min-height: 100vh;
+}
+
+/*hilangkan side bar*/
+@media screen and (max-width:867px) {
+  .dummy{
+      display: none;
+  }
+}
+
+@media screen and (max-width:867px) {
+  .next-value{
+    font-size: 50px;
+}
+
+}
+
+.card{
+    background-color: black;
+  min-width: 316px;
+  min-height: 324px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 0px;
+}
+
+.svg{
+    width: 50%;
+    height: 50%;
+}
+
+.frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    color: antiquewhite;
+    font-family: "OrbitronRegular", sans-serif;
+    font-size: 1.2rem;
+}
+
+.overlay-shadow-2{  
+  position: absolute;
+  min-width: 316px;
+  min-height: 324px;
+  top: 30px;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #D13838;
+}
+
+.card{
+  position: relative;
+}

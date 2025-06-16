@@ -12,30 +12,40 @@ function AboutMe() {
   const photo = useRef();
   const mycard = useRef();
   const shadowCard = useRef();
+  const showAboutMe = useRef();
+  const showValue = useRef();
   useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: ".img-frame",
     });
     tl.fromTo(
-      [photo.current, mycard.current],
+      [photo.current, mycard.current, shadowCard.current],
       { opacity: 0 },
       {
         opacity: 1,
-        x: 0,
-        y: 0,
-        duration: (index) => (index == 1 ? 0.2 : 2),
+        x: (index) => (index == 2 ? 20 : 0),
+        y: (index) => (index == 2 ? 70 : 0),
+        duration: (index) => (index == 1 ? 0.2 : 2.5),
       }
     );
-    tl.fromTo(
-      shadowCard.current,
-      { opacity: 0 },
-      {
-        opacity: 1,
-        duration: 0.5,
-        x: 20,
-        y: 70,
-      }
-    );
+    const tl2 = gsap.timeline({
+      scrollTrigger: ".next-intro"
+    });
+    tl2.fromTo(
+      showAboutMe.current,
+      { x: 150 },
+      {x: 0, duration:1}
+    )
+    const tl3 = gsap.timeline({
+      scrollTrigger: ".next-value"
+    })
+        tl3.fromTo(
+      showValue.current,
+      { x: 150 },
+      {x: 0, duration:1}
+    )
+
+
   });
 
   return (
@@ -43,22 +53,22 @@ function AboutMe() {
       <div className="dummy2"></div>
       <section className="about-me">
         <div className="transition-kotak-1">
-            <h1 className="next-intro">About me</h1>
+            <h1 className="next-intro" ref={showAboutMe}>About me</h1>
         </div>
         <section className="real-about-me">
           <div className="transition-stripes-1"></div>
           <section className="my-container-info row">
-            <div className="col-12 col-md-4">
+            <div className="col-12 col-md-4" id="more-pad1">
               <div className="my-frame-box">
                 <div className="img-frame" ref={photo}>
                   <img src={Howard} alt="" srcset=""></img>
                 </div>
               </div>
             </div>
-            <div className="col-12 col-md-8">
+            <div className="col-12 col-md-8" id="more-pad2">
               <div className="my-frame-box">
                 <div className="overlay-shadow" ref={shadowCard}></div>
-                <div className="my-description p-5" ref={mycard}>
+                <div className="my-description p-5 " ref={mycard}>
                   <div className="heading">
                     <h3>Howard</h3>
                     <h3>Student College</h3>
@@ -82,7 +92,7 @@ function AboutMe() {
                     industries nowadays. If anyone is willingly to hire me,{" "}
                     <span className="bold-weight">please contact me.</span>"
                   </p>
-                  <button className="my-button bold-weight">View CV</button>
+                  <button className="my-button bold-weight "><span className="my-svg">View CV</span></button>
                 </div>
               </div>
             </div>
@@ -91,7 +101,7 @@ function AboutMe() {
         </section>
         <div className="transition-kotak-2">
           <div className="container-fluid ">
-            <h1 className="next-value">VALUE</h1>
+            <h1 className="next-value" ref={showValue}>VALUE</h1>
           </div>
         </div>
       </section>

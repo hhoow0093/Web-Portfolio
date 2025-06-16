@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "ValorantFont";
+  src: url("../assets/font/Valorant-Font.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OrbitronBlack";
+  src: url("../assets/font/Orbitron-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OrbitronBold";
+  src: url("../assets/font/Orbitron-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OrbitronRegular";
+  src: url("../assets/font/Orbitron-Regular.ttf") format("truetype");
+}
+
+.wrapper {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.dummy {
+  min-width: 90px;
+  flex-grow: 0;
+  background-color: aqua;
+}
+
+.timeline{
+    height: auto;
+  background-color: #A0A0A0;
+  background-image: url('../assets/img/Timeline.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+
+.vertical-timeline-element-title{
+    font-family: "ValorantFont", sans-serif;
+}
+
+.vertical-timeline-element-subtitle{
+    font-family: "ValorantFont", sans-serif;
+    font-size: 1rem;
+
+}
+
+.my-text-timeline{
+    font-family: "OrbitronRegular", sans-serif;
+    font-size: 0.5rem;
+}
+
+.vertical-timeline-element-date{
+    font-family: "OrbitronBold", sans-serif;
+    font-size: 0.5rem
+}
