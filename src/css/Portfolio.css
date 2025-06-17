@@ -29,15 +29,15 @@
   background-color: aqua;
 }
 
-.portfolio{
-height: auto;
-  background-color: #A0A0A0;
-  min-height: 100vh;
+  .portfolio{
+  background-image: url('../assets/img/port.png');
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  height: auto;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
 .transition-kotak-2{
@@ -56,4 +56,114 @@ height: auto;
   font-size: 80px;
   margin: 0;
   padding: 0;
+}
+
+
+.portfolio-cards{
+  min-height: 100vh;
+}
+
+.portfolio-card-bg{
+  position: relative;
+  width: 405px;
+  min-height: 486px;
+  background-color: #3D0000;
+}
+
+.frame-port{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-card-content{
+  padding: 20px;
+  position: absolute;
+  width: 405px;
+  min-height: 486px;
+  background-color: #D13838;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.valorant-header{
+  font-family: "ValorantFont", sans-serif;
+  font-size: 50px;
+  color: aliceblue;
+}
+
+.text-orbitron{
+  font-family: "OrbitronRegular", sans-serif;
+  font-size: 22px;
+  color: aliceblue;
+}
+
+.project-button{
+  background-color: #3D0000;
+  padding: 0.7rem;
+  transition: background-color 0.2s;
+  color: aliceblue;
+  font-size: 15px;
+  max-width: 10rem;
+  font-family: "OrbitronRegular", sans-serif; 
+}
+
+
+.project-button:hover{
+  background-color: #850101;
+}
+
+.text-haha{
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#konten-1{
+  top: 30px;
+  right: 20px;
+}
+
+#konten-2{
+  top: 20px;
+}
+
+#konten-3{
+  top: 30px;
+  left: 20px;
+}
+
+
+
+@media screen and (max-width:867px) {
+  .next-portfolio{
+    font-size: 50px;
+}
+
+#konten-1{
+  top: 20px;
+  left: 0;
+}
+
+#konten-2{
+  left: 0;
+  
+}
+
+
+#konten-3{
+  top: 20px;
+  left: 0;
+}
+
+}
+
+@media screen and (max-width:1199px) {
+.portfolio-card-bg{
+    margin: 50px 0;
+}
 }

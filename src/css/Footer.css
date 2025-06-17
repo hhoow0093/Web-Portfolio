@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "ValorantFont";
+  src: url("../assets/font/Valorant-Font.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OrbitronBlack";
+  src: url("../assets/font/Orbitron-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OrbitronBold";
+  src: url("../assets/font/Orbitron-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OrbitronRegular";
+  src: url("../assets/font/Orbitron-Regular.ttf") format("truetype");
+}
+
+.wrapperfooter {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.footer {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  min-height: 10vh;
+  margin: 0;
+  padding: 10vh 0;
+}
+
+.logo-footer {
+  color: aliceblue;
+  font-family: "ValorantFont", sans-serif;
+  font-size: 50px;
+}
+
+.frame-sosmed {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-sosmed {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.heading-footer {
+  color: aliceblue;
+  font-family: "ValorantFont", sans-serif;
+  font-size: 50px;
+}
+
+.sub-heading-footer {
+  color: aliceblue;
+  font-family: "OrbitronRegular", sans-serif;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1199px) {
+  #change-size {
+    padding-top: 80px;
+    margin-top: 80px;
+    width: 50%;
+    height: 50%;
+  }
+  .logo-footer {
+    font-size: 20px;
+  }
+
+  .logo-sosmed {
+    margin-top: 20px;
+  }
+
+  .github > *,
+  .linkedin > *,
+  .youtube > *,
+  .insta > * {
+    width: 20px;
+  }
+}
+
+.github, .linkedin, .youtube, .insta{
+    cursor: pointer;
+}
+

@@ -58,7 +58,7 @@ function Hero() {
   return (
     <div className="wrapper">
       <div className="dummy"></div>
-      <section className="my-hero-section container-fluid">
+      <section className="my-hero-section container-fluid" id="Hero">
         <div className="overlay1" ref={overlay1}></div>
         <div
           className={`character-overlay ${currentFade}`}

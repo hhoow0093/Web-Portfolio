@@ -84,7 +84,7 @@ const Value = () => {
               <div className="card " ref={(el) => (cardsValue.current[2] = el)}>
                 <div className="overlay-shadow-2" ref={(el) => (cardsShadow.current[2] = el)}>
                   <img src={clockSVG} alt="" className="svg" />
-                  <p className="text">Consistency</p>
+                  <p className="text" id="value">Consistency</p>
                 </div>
               </div>
             </div>
@@ -92,7 +92,7 @@ const Value = () => {
         </section>
         <div className="transition-kotak-2">
           <div className="container-fluid ">
-            <h1 className="next-timeline" ref={showTimeline}>TIMELINE</h1>
+            <h1 className="next-timeline" ref={showTimeline} id="timeline">TIMELINE</h1>
           </div>
         </div>
       </section>

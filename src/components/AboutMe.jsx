@@ -55,7 +55,7 @@ function AboutMe() {
         <div className="transition-kotak-1">
             <h1 className="next-intro" ref={showAboutMe}>About me</h1>
         </div>
-        <section className="real-about-me">
+        <section className="real-about-me" id="about-me">
           <div className="transition-stripes-1"></div>
           <section className="my-container-info row">
             <div className="col-12 col-md-4" id="more-pad1">

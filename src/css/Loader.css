@@ -1,0 +1,24 @@
+.loader-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.loader-layer {
+  flex: 1;
+  height: 100%;
+}
+
+.loader-layer:nth-child(1) {
+  background-color: #3D0000;
+}
+.loader-layer:nth-child(2) {
+  background-color: #5F0000;
+}
+.loader-layer:nth-child(3) {
+  background-color: #D13838;
+}
+
