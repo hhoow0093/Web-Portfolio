@@ -4,18 +4,22 @@ import "../css/Loader.css";
 
 const Loader = () => {
   const loaderRef = useRef(null);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const handleLoad = () => {
       setTimeout(() => {
         animateLoader();
+        setLoaded(true);
       }, 500);
     };
 
     window.addEventListener("load", handleLoad);
 
-    return () => window.removeEventListener("load", handleLoad);
-  }, []);
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []); 
 
   const animateLoader = () => {
     const layers = loaderRef.current.querySelectorAll(".loader-layer");
@@ -28,7 +32,7 @@ const Loader = () => {
       ease: "power2.inOut",
       onComplete: () => {
         loaderRef.current.style.display = "none";
-      }
+      },
     });
   };
 
