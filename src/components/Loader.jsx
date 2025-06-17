@@ -6,20 +6,33 @@ const Loader = () => {
   const loaderRef = useRef(null);
   const [loaded, setLoaded] = useState(false);
 
-  useEffect(() => {
-    const handleLoad = () => {
-      setTimeout(() => {
-        animateLoader();
-        setLoaded(true);
-      }, 500);
-    };
+useEffect(() => {
+  const timeout = setTimeout(() => {
+    if (!loaded) {
+      animateLoader();
+      setLoaded(true);
+    }
+  }, 5000);
 
+  const handleLoad = () => {
+    clearTimeout(timeout);
+    setTimeout(() => {
+      animateLoader();
+      setLoaded(true);
+    }, 500);
+  };
+
+  if (document.readyState === "complete") {
+    handleLoad();
+  } else {
     window.addEventListener("load", handleLoad);
+  }
 
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-  }, []); 
+  return () => {
+    window.removeEventListener("load", handleLoad);
+    clearTimeout(timeout);
+  };
+}, []);
 
   const animateLoader = () => {
     const layers = loaderRef.current.querySelectorAll(".loader-layer");
