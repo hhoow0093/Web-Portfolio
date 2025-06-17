@@ -75,7 +75,7 @@ const Portfolio = () => {
                       <span className="bold-weight"> laravel</span> framework for faster production.{" "}
                     </p>
                   </div>
-                  <button className="project-button">Project-Link</button>
+                  <button className="project-button"><a href="https://github.com/hhoow0093/UAS-WEBPRO-IF330" className="anjir">Project-Link</a></button>
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@ const Portfolio = () => {
                       library such as <span className="bold-weight">ejs and expressjs.</span>
                     </p>
                   </div>
-                  <button className="project-button">Project-Link</button>
+                  <button className="project-button"><a href="https://github.com/hhoow0093/Pool-Diary" className="anjir">Project-Link</a></button>
                 </div>
               </div>
             </div>
@@ -120,7 +120,7 @@ const Portfolio = () => {
                       <span className="bold-weight">php + mysql database.</span>
                     </p>
                   </div>
-                  <button className="project-button">Project-Link</button>
+                  <button className="project-button"><a href="https://github.com/hhoow0093/UTS-LECTURE-WEBPRO-IF330" className="anjir">Project-Link</a></button>
                 </div>
               </div>
             </div>

@@ -92,7 +92,7 @@ function AboutMe() {
                     industries nowadays. If anyone is willingly to hire me,{" "}
                     <span className="bold-weight">please contact me.</span>"
                   </p>
-                  <button className="my-button bold-weight "><span className="my-svg">View CV</span></button>
+                  <button className="my-button bold-weight "><span className="my-svg"><a href="https://drive.google.com/drive/folders/1Hco7Kmqs75KNWdvRwxez--Iszw3WOQO-?usp=drive_link" className="anjir">View CV</a></span></button>
                 </div>
               </div>
             </div>
